@@ -30,11 +30,6 @@ const deleteRecord = async (id) => {
 	return collection.deleteOne({_id: new ObjectId(id)});
 }
 
-const updateRecord = async (id, data) => {  
-    const collection = await getCollection(COLLECTION_NAME);  
-    return collection.updateOne({ _id: ObjectId.createFromHexString(id)}, { $set: data });  
-}  
-
 export default async function handler(req, res) {
 
 	const isAllowedMethod = req.method === 'GET' || req.method === 'POST' || req.method === 'PUT' || req.method === 'DELETE';
@@ -66,9 +61,6 @@ export default async function handler(req, res) {
 		const result = await deleteRecord(id);
 		return sendOk(res, result);
 	}
-    else if (req.method === 'UPDATE') {  
-        const record = await updateRecord(req.query.id, req.body);  
-        return sendOk(res, record);  }
 }
 
 
