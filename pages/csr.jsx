@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 
-const csr=() => {
+const Csr= () => {
 
-    const [data, setData]=useState([]);
+    const [data, setData]=useState({});
 
     const getUser = async() =>{
         const response = await fetch(`https://randomuser.me/api/?nat=us&randomapi`);
@@ -26,4 +26,4 @@ useEffect(() => {
     )
 
 }
-export default csr
+export default Csr
