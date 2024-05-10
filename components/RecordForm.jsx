@@ -19,51 +19,65 @@ const RecordForm = (props) => {
       <div className="border p-4 rounded-md shadow-sm flex flex-col gap-4 w-full max-w-80">
         <div>
           <label
-            htmlFor="title"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            htmlFor="titlu"
+            className="block mb-3 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Title
+            Titlu
           </label>
           <input
             type="text"
-            id="title"
-            value={entry.title}
-            onChange={(e) => updateEntry("title", e.target.value)}
+            id="titlu"
+            value={entry.titlu}
+            onChange={(e) => updateEntry("titlu", e.target.value)}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Title"
+            placeholder="Titlu"
             required
           />
         </div>
         <div>
           <label
-            htmlFor="description"
+            htmlFor="autor"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Description
+            Autor
           </label>
           <textarea
-            id="description"
-            rows="4"
-            value={entry.description}
-            onChange={(e) => updateEntry("description", e.target.value)}
+            id="autor"
+            value={entry.autor}
+            onChange={(e) => updateEntry("autor", e.target.value)}
             className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Write your thoughts here..."
+            placeholder="Autor"
           ></textarea>
         </div>
         <div>
           <label
-            htmlFor="Other"
+            htmlFor="descriere"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Other
+            Descriere
           </label>
           <textarea
-            id="other"
+            id="descriere"
             rows="4"
-            value={entry.other}
-            onChange={(e) => updateEntry("other", e.target.value)}
+            value={entry.descriere}
+            onChange={(e) => updateEntry("descriere", e.target.value)}
             className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Write your thoughts here..."
+            placeholder="Adaugati descrierea cartii"
+          ></textarea>
+        </div>
+        <div>
+          <label
+            htmlFor="categorie"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Categorie
+          </label>
+          <textarea
+            id="categorie"
+            value={entry.categorie}
+            onChange={(e) => updateEntry("categorie", e.target.value)}
+            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Adaugati categoria cartii"
           ></textarea>
         </div>
         <div className="w-full flex justify-center gap-4">

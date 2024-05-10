@@ -1,6 +1,7 @@
 export const recordDefaultValues = {
     _id: "",
-    title: "",
-    description: "",
-    other: ""
+    titlu: "",
+    autor: "",
+    descriere: "",
+    categorie: ""
 };
